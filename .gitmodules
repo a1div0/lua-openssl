@@ -1,0 +1,3 @@
+[submodule "deps/lua-openssl"]
+	path = deps/lua-openssl
+	url = https://github.com/zhaozg/lua-openssl.git
