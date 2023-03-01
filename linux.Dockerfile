@@ -7,7 +7,3 @@ RUN apt install -y build-essential
 RUN apt install -y lua5.3
 RUN apt-get install -y luajit libluajit-5.1-dev libssl-dev
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -yq pkg-config
-
-WORKDIR ${BUILD_DIR}
-
-RUN set -ex && make
