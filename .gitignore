@@ -1,3 +1,5 @@
 .idea/
 sdk/
 .rocks/
+*.rock
+*.out
