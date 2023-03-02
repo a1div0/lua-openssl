@@ -15,7 +15,10 @@ dependencies = {
 }
 build = {
     type = 'builtin',
+    modules = {
+        ['openssl'] = 'openssl/init.lua',
+    },
     install = {
-        lib = {'openssl.so'},
+        lib = {'openssl/libssl.so'},
     }
 }

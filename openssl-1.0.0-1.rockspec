@@ -6,9 +6,8 @@ source  = {
     tag = '1.0.0',
 }
 description = {
-    summary  = "OpenSSL rock based https://github.com/zhaozg/lua-openssl",
+    summary  = 'OpenSSL rock based https://github.com/zhaozg/lua-openssl',
     homepage = 'https://github.com/a1div0/lua-openssl',
-    maintainer = "Alexander Klenov <a.a.klenov@ya.ru>",
     license  = 'None',
 }
 dependencies = {
@@ -16,7 +15,10 @@ dependencies = {
 }
 build = {
     type = 'builtin',
+    modules = {
+        ['openssl'] = 'openssl/init.lua',
+    },
     install = {
-        lib = {'openssl.so'},
+        lib = {'openssl/libssl.so'},
     }
 }
