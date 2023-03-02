@@ -132,7 +132,7 @@ end
 ---@comment шифрования, в качестве ключа следует использовать публичный ключ в формате PEM (PKCS8)
 ---@param jwt_token string JWT-токен
 ---@param key string Ключ, используемый для подписи данного токена (JSON Web Key)
----@param verify_prepare_func function Функция, вызываемая перед проверкой, параметр token_items содержит декодированные данные, params содержит ключ
+---@param verify_prepare_func function Необязательный. См. readme
 ---@param verify bool Необязательный. Параметр для отладочной среды. Если передать false - подпись проверяться не будет. По умолчанию = true.
 ---@return table Верифицированное тело токена
 function jwt.decode(jwt_token, key, verify_prepare_func, verify)

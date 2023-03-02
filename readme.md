@@ -36,7 +36,7 @@ make rock
 
 **key (string)** - Ключ, используемый для подписи данного токена (JSON Web Key)
 
-**verify_prepare_func (function)** - 
+**verify_prepare_func (function)** - Необязательный.
 Функция, вызываемая перед проверкой, параметр token_items содержит декодированные данные, params содержит ключ
 Пример реализации:
 ```lua
