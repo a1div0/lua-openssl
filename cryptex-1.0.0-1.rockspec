@@ -17,6 +17,7 @@ build = {
     type = 'builtin',
     modules = {
         ['cryptex'] = 'cryptex/init.lua',
+        ['cryptex.jwt'] = 'cryptex/jwt.lua',
     },
     install = {
         lib = {'cryptex/lua-openssl.so'},
