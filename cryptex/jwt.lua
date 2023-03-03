@@ -10,12 +10,10 @@ local jwt = {}
 
 local function rsasha_encode(hash_alg, data, private_pem)
     local evp_pkey_private = pkey_lib.read(private_pem, true)
-    local signature = evp_pkey_private:sign(data, hash_alg)
-    return lua_openssl.hex(signature, true)
+    return evp_pkey_private:sign(data, hash_alg)
 end
 
-local function rsasha_verify(hash_alg, data, signature_str, public_pem)
-    local signature = lua_openssl.hex(signature_str, false)
+local function rsasha_verify(hash_alg, data, signature, public_pem)
     local evp_pkey_public = pkey_lib.read(public_pem, false)
     return evp_pkey_public:verify(data, signature, hash_alg)
 end
